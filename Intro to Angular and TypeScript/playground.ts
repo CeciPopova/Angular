@@ -14,3 +14,4 @@ class UserTest implements User2 {
     age: number;
 
 }
+
