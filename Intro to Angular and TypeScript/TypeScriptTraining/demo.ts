@@ -35,8 +35,10 @@ class Person extends Human {
     }
 }
 
-const personIvan = new Person('Ivan', 33);
+const personIvan = new Person('Ivan', 37);
 personIvan.speak();
+
+
 
 function getIdentity<T>(id: T) {
     console.log(id);
