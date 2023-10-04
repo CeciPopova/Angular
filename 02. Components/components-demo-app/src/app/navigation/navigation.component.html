@@ -1,6 +1,22 @@
 <div id="nav">
-    
-    <button (click)="handleClick()">Click me!</button>
+    <span *ngIf="isActive"> 
+    <ul>
+        <li>
+            ActiveLists
+        </li>
+        <li>
+            ActiveLists
+        </li>
+        <li>
+            ActiveLists
+        </li>
+    </ul>
+    </span>
+    <span *ngIf="!isActive">
+        <div>Nothing is active!</div>
+
+    </span> 
+    <button (click)="handleClick()">Make {{ isActive ? 'Inactive' : 'Active'}}</button>
 </div>
 
 

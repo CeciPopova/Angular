@@ -6,9 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
+  
+  isActive = false;
 
 
-  handleClick() {
+  handleClick(): void {
+    this.isActive = !this.isActive;
     console.log('Clicked!');
   }
 }
