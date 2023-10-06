@@ -1,14 +1,12 @@
 <div id="nav">
+    <h3>{{ titleFromApp }}</h3>
     <span *ngIf="isActive"> 
     <ul>
-        <li>
-            ActiveLists
-        </li>
-        <li>
-            ActiveLists
-        </li>
-        <li>
-            ActiveLists
+        <li *ngFor="let user of activeUsers">
+            <span [class.green]="user.age >= 18" [class.red]="user.age < 18">
+                {{ user.name + ': ' + user.age}}
+            </span>
+           
         </li>
     </ul>
     </span>
@@ -16,7 +14,8 @@
         <div>Nothing is active!</div>
 
     </span> 
-    <button (click)="handleClick()">Make {{ isActive ? 'Inactive' : 'Active'}}</button>
+    <input [value]="inputValue" type="text" />
+    <button (click)="handleClick($event)">Make {{ isActive ? 'Inactive' : 'Active'}}</button>
 </div>
 
 

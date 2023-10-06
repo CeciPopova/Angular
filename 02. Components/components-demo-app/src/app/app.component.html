@@ -1,5 +1,7 @@
 <div>Hello World!</div>
-<span>{{title}}</span>
+<span id="root">{{title}}</span>
 <hr />
 <app-home/>
-<app-navigation/>
+<app-navigation [title]="title" [activeUsers]="users"/>
+
+(onTestOutput)="onTestOutput($event)";
