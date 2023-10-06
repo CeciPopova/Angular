@@ -23,8 +23,8 @@ export class AppComponent {
     
   ];
 
-  onTestOutput(event: Event) {
-    console.log('onTestOutput');
-    console.log(event);
+  onOutputChildHandler() {
+    console.log('onOutputChildHandler');
+   
   }
 }

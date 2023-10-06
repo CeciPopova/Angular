@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
 export class NavigationComponent implements OnInit, OnChanges {
   @Input('title') titleFromApp: string = '';
   @Input('activeUsers') activeUsers: { name: string; age: number }[] = [];
-  @Output() onTestOutput = new EventEmitter<boolean>();
+  @Output() onChildOutput = new EventEmitter<boolean>();
   
   isActive = false;
 
@@ -25,6 +25,6 @@ export class NavigationComponent implements OnInit, OnChanges {
 
   handleClick(event: Event): void {
     this.isActive = !this.isActive;
-    this.onTestOutput.emit(this.isActive);
+    this.onChildOutput.emit(this.isActive);
   }
 }

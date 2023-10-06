@@ -2,6 +2,4 @@
 <span id="root">{{title}}</span>
 <hr />
 <app-home/>
-<app-navigation [title]="title" [activeUsers]="users"/>
-
-(onTestOutput)="onTestOutput($event)";
+<app-navigation [title]="title" [activeUsers]="users" (onChildOutput)="onOutputChildHandler()" />
