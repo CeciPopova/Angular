@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@angular/core';
 import { User } from '../types/User';
 
 
@@ -11,4 +11,12 @@ import { User } from '../types/User';
 export class UsersListComponent {
   @Input() users: User[] = [];
 
+  constructor(private cd: ChangeDetectorRef) {}
+
+  ngOnChanges() {
+    console.log('invoked from changed!');
+  }
+  refresh() {
+    this.cd.detectChanges();
+  }
 }
