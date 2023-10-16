@@ -9,7 +9,11 @@ import { UserService } from './user.service';
 })
 export class AppComponent {
   title = 'demo-app';
-  constructor(public userService: UserService){}
+  appUsers: User[] = [];
+
+  constructor(public userService: UserService){
+    this.appUsers = this.userService.users;
+  }
 
 }
  

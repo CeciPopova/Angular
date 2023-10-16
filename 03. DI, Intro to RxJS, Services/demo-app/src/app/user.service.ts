@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { User } from './types/User';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+  // providedIn: 'root'
+// })
 export class UserService {
 
   users: User[] = [
@@ -27,6 +27,7 @@ export class UserService {
     const user = {
       name: inputName.value,
       age: Number(inputAge.value)
+
     };
  //!On this way works on Defaulth ChangeDetectorStrategy!
     //*this.users.push(user);
