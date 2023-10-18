@@ -31,6 +31,8 @@ export class UserService {
     };
  //!On this way works on Defaulth ChangeDetectorStrategy!
     //*this.users.push(user);
+
+    
  //!On this way works on OnPush ChangeDetectorStrategy!
     this.users = [...this.users, user];
     inputName.value = '';
