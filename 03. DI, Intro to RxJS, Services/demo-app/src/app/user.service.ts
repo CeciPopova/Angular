@@ -19,7 +19,7 @@ export class UserService {
       name: 'DemoName',
       age: 0,
     });
-    console.log('User has been added!');
+    //console.log('User has been added!');
    }, 3000);
     
   }
@@ -32,7 +32,7 @@ export class UserService {
  //!On this way works on Defaulth ChangeDetectorStrategy!
     //*this.users.push(user);
 
-    
+
  //!On this way works on OnPush ChangeDetectorStrategy!
     this.users = [...this.users, user];
     inputName.value = '';
