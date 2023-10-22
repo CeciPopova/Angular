@@ -23,11 +23,12 @@ export class UserService {
     // }, 3000);
   }
   addUser(inputName: HTMLInputElement, inputAge: HTMLInputElement) {
-    // const user = {
-    // name: inputName.value,
-    // age: Number(inputAge.value),
-    // };
+     const user = {
+     name: inputName.value,
+     age: Number(inputAge.value),
+     };
     // this.users = [...this.users, user];
+    //this.users.push(user);
 
     inputName.value = '';
     inputAge.value = '';
