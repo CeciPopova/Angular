@@ -16,17 +16,24 @@ export class UserListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.loadUsers();
+  }
+
+  loadUsers(): void {
     this.globalLoaderService.showLoader();
-    this.userService.fetchUsers().subscribe({
-      next: (users) => {
-        //console.log(users);
-        this.userList = users;
-        this.globalLoaderService.hideLoader();
-      },
-      error: (err) => {
-        console.log(`Error: ${err}`);
-        this.globalLoaderService.hideLoader();
-      },
-    });
+
+    setTimeout(() => {
+      this.userService.fetchUsers().subscribe({
+        next: (users) => {
+          //console.log(users);
+          this.userList = users;
+          this.globalLoaderService.hideLoader();
+        },
+        error: (err) => {
+          console.log(`Error: ${err}`);
+          this.globalLoaderService.hideLoader();
+        },
+      });
+    }, 3000);
   }
 }
