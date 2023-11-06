@@ -12,4 +12,9 @@ export class UserService {
   fetchUsers() {
     return this.http.get<User[]>('https://jsonplaceholder.typicode.com/users');
   }
+
+  fetchSingleUser(id: number) {
+    return this.http.get<User>(`https://jsonplaceholder.typicode.com/users/${id}`);
+  }
+
 }
