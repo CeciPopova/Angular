@@ -5,3 +5,8 @@
     align-items: center;
     padding: 20px;
 }
+
+.clickable {
+    cursor: pointer;
+    background-color: aqua;
+}

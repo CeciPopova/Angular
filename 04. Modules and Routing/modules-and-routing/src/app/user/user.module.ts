@@ -16,10 +16,9 @@ import { UserDetailResolver } from './user-details/user-details.resolver';
       },
       {
         path: 'user/details/:id',
-        resolve: { user: UserDetailResolver },
+        resolve: { user: UserDetailResolver},
         component: UserDetailsComponent,
-      }
-      
+      }    
     ]),
     
   ],
