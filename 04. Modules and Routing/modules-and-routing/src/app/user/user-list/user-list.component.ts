@@ -34,6 +34,6 @@ export class UserListComponent implements OnInit {
           this.globalLoaderService.hideLoader();
         },
       });
-    }, 3000);
+    }, 1000);
   }
 }
