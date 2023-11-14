@@ -3,13 +3,22 @@
         <div class="logo-wrap">
             <p class="logo"><span class="logo">SoftUni Forum</span></p>
         </div>
-        <div *ngIf="isLoggedIn" class="mini-navbar">
-            <ul>
+        <div  class="mini-navbar">
+            <ul *ngIf="!isLoggedIn">
                 <li>
                     <a routerLink="/login">Login</a>
                 </li>
                 <li>
                     <a routerLink="/register">Register</a>
+                </li>
+            </ul>
+
+            <ul *ngIf="isLoggedIn">
+                <li>
+                    <a routerLink="/profile">{{ firstName }}'s profile</a>
+                </li>
+                <li>
+                    <a (click)="logout()">Logout</a>
                 </li>
             </ul>
         </div>
