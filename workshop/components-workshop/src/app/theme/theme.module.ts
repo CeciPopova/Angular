@@ -9,7 +9,7 @@ import { ThemeRoutingModule } from './theme-routing.module';
 @NgModule({
   declarations: [
     NewThemeComponent,
-    CurrentThemeComponent
+    CurrentThemeComponent,
   ],
   imports: [
     CommonModule,
