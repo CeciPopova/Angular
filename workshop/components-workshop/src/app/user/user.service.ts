@@ -35,6 +35,7 @@ export class UserService {
 
   register(): void {
     localStorage.getItem(JSON.stringify(this.user));
+    //console.log(this.user);
   }
 
   logout(): void {
