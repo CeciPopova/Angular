@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent {
   constructor(private userService: UserService, private router: Router) {}
- register(): void {
+ register(email:string, username:string, phoneNumber:string, password:string, repass:string): void {
    //TODO For now we are not handling the data
    
    this.userService.register();
