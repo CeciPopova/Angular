@@ -26,9 +26,15 @@ export class UserService {
     this.user = {
       email: 'john.doe@gmail.com',
       firstName: 'John',
+      phoneNumber: '885 888 888',
+      password: '******'
     };
 
-    localStorage.setItem(this.USER_KEY, JSON.stringify(this.user))
+    localStorage.setItem(this.USER_KEY, JSON.stringify(this.user));
+  }
+
+  register(): void {
+    localStorage.getItem(JSON.stringify(this.user));
   }
 
   logout(): void {
