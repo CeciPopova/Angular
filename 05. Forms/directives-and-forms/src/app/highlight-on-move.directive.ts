@@ -1,4 +1,4 @@
-import { Element } from '@angular/compiler';
+
 import {
   Directive,
   ElementRef,
@@ -12,8 +12,9 @@ import {
   selector: '[appHighlightOnMove]',
 })
 export class HighlightOnMoveDirective implements OnInit, OnDestroy {
-  @HostListener('mouseover', ['$event']) mmouseOverHandler(e: MouseEvent) {
-    console.log(e);
+  // (mouseover)="mouseOverHandler($event)"
+  @HostListener('mouseover', ['$event']) mouseOverHandler(e: MouseEvent) {
+    console.log('mouseover', e);
   }
 
   constructor(private elRef: ElementRef, private renderer: Renderer2) {}

@@ -1,6 +1,22 @@
-<div appHighlightOnMove>Hello Directives!</div>
-<hr />
-<div appMyRouterLink="/login">Link to Login</div>
-<div appMyRouterLink="/register">Link to Register</div>
-<hr />
+<nav>
+    <div appMyRouterLink="/login">Link to Login</div>
+    <div appMyRouterLink="/register">Link to Register</div>
+</nav>
 <router-outlet />
+<hr />
+
+<!--PLAYGROUND-->
+<!--structural directives are always with * prefix-->
+<div *ngIf="true">Simple Div 1</div>
+
+<!--the * prefix revers to ng-template-->
+<ng-template [ngIf]="true">
+    <div>Simple Div 1.1</div>
+</ng-template>
+
+<hr />
+<button (click)="toggle()">toggle my state</button>
+
+<div *appMyStructural="isShown">
+    Structural Directive (Usage 1)
+</div>

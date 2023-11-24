@@ -7,10 +7,10 @@ import { Router } from '@angular/router';
 export class MyRouterLinkDirective implements OnInit {
   @Input() appMyRouterLink: string = '';
 
-  constructor(private elRaf: ElementRef, private renderer: Renderer2, private router: Router ) { }
+  constructor(private elRef: ElementRef, private renderer: Renderer2, private router: Router ) { }
   ngOnInit(): void {
     this.renderer.listen(
-      this.elRaf.nativeElement,
+      this.elRef.nativeElement,
       'click',
       this.clickHandler.bind(this)
     )
