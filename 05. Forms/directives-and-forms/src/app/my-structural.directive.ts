@@ -1,11 +1,33 @@
-import { Directive } from '@angular/core';
+import {
+  Directive,
+  Input,
+  OnChanges,
+  SimpleChanges,
+  TemplateRef,
+  ViewContainerRef,
+} from '@angular/core';
 
 @Directive({
-  selector: '[appMyStructural]'
+  selector: '[appMyStructural]',
 })
-export class MyStructuralDirective {
+export class MyStructuralDirective implements OnChanges {
+  @Input() appMyStructural: boolean = false;
 
+  constructor(
+    private templateRef: TemplateRef<any>,
+    private vcRef: ViewContainerRef
+  ) {}
 
-  constructor() { }
-
+  ngOnChanges(changes: SimpleChanges): void {
+    //console.log(this.appMyStructural);
+    //console.log(changes);
+    if (this.appMyStructural) {
+      this.vcRef.createEmbeddedView(this.templateRef, {
+        value: 'value From NgOnChanges 123',
+        
+      });
+    } else {
+      this.vcRef.clear();
+    }
+  }
 }
