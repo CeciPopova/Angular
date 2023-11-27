@@ -4,28 +4,3 @@
 </nav>
 <router-outlet />
 <hr />
-
-<!--PLAYGROUND-->
-<!--structural directives are always with * prefix-->
-<div *ngIf="true">Simple Div 1</div>
-
-<!--the * prefix revers to ng-template-->
-<ng-template [ngIf]="true">
-    <div>Simple Div 1.1</div>
-</ng-template>
-
-<hr />
-<!--Custom Structural Directives-->
-<!--Usage 1-->
-<button (click)="toggle()">toggle my state</button>
-
-<div *appMyStructural="isShown">
-    Structural Directive (Usage 1)
-</div>
-
-<!--Usage 2-->
-<ng-template [appMyStructural]="isShown" let-value="value">
-    <div>Structural Directives (Usage 2)</div>
-    <h4>value: {{ value }}</h4>
-</ng-template>
-

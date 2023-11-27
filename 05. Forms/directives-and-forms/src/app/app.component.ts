@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  isShown:boolean = true;
 
-  toggle(): void {
-    this.isShown = !this.isShown;
-  }
 }
