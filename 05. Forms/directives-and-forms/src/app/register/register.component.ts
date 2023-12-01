@@ -13,8 +13,12 @@ export class RegisterComponent implements OnInit{
   });
 
   constructor(private fb: FormBuilder) {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.registerForm.get('email')?.valueChanges.subscribe(console.log);
+  }
 
-  handleSubmit(): void{}
+  handleSubmit(): void{
+    //
+  }
 
 }
