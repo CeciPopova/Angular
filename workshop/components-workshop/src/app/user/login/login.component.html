@@ -1,7 +1,7 @@
 
     <!-- homepage -->
     <div class="container">
-        <form class="login" action="" method="post">
+        <form class="login" #form="ngForm" (ngSubmit)="login(form)">
 
             <fieldset>
                 <h2>Login Form</h2>
@@ -15,27 +15,28 @@
                     id="email" 
                     placeholder="john.doe@gmail.com"
                     #inputEmail
+                    ngModel
                     />
                 </p>
                 <p class="error">
                     Email is required!
                 </p>
-                <!-- <p class="error">
+                <p class="error">
                     Email is not valid!
-                </p> -->
+                </p>
 
                 <p class="field field-icon">
                     <label for="password"><span><i class="fas fa-lock"></i></span></label>
-                    <input type="password" name="password" id="password" placeholder="******" #inputPassword />
+                    <input type="password" name="password" id="password" placeholder="******" #inputPassword ngModel />
                 </p>
-                <!-- <p class="error">
+                <p class="error">
                     Password is required!
                 </p>
                 <p class="error">
                     Password must be at least 4 characters!
-                </p> -->
+                </p> 
 
-                <button (click)="login(inputEmail.value, inputPassword.value)">Login</button>
+                <button>Login</button>
 
                 <p class="text-center">
                     Have an account?

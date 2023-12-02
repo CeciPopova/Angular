@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,8 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   constructor(private userService: UserService, private router: Router) {}
 
-  login(email:string, password:string): void {
+  login(form: NgForm): void {
+    console.log(form.value);
     //TODO For now we are not handling the data
     
     this.userService.login();
