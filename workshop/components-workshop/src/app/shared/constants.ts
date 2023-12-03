@@ -1,0 +1,1 @@
+export const DEFAULT_IMAIL_DOMAINS = ['bg', 'com'];
