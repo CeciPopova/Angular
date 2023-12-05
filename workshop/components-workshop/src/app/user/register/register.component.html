@@ -1,70 +1,88 @@
+<!-- homepage -->
+<div class="container">
+    <form class="register" [formGroup]="form" (ngSubmit)="register()">
 
-    <!-- homepage -->
-    <div class="container">
-        <form class="register" action="" method="post">
+        <fieldset>
+            <h2>Registration Form</h2>
 
-            <fieldset>
-                <h2>Registration Form</h2>
+            <!-- username -->
+            <p class="field field-icon">
+                <label for="username"><span><i class="fas fa-user"></i></span></label>
+                <input 
+                class="input-error" 
+                type="text" 
+                name="username" 
+                id="username" 
+                placeholder="Johny"
+                formControlName="username" 
+                />
+            </p>
+            <p class="error">Username is required!</p>
 
-                <!-- username -->
-                <p class="field field-icon">
-                    <label for="username"><span><i class="fas fa-user"></i></span></label>
-                    <input class="input-error" type="text" name="username" id="username" placeholder="Johny" #inputUsername>
-                </p>
-                <p class="error">
-                    Username is required!
-                </p>
+            <!-- email -->
+            <p class="field field-icon">
+                <label for="email"><span><i class="fas fa-envelope"></i></span></label>
+                <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                placeholder="john.doe@gmail.com" 
+                formControlName="email" 
+                />
+            </p>
 
-                <!-- email -->
-                <p class="field field-icon">
-                    <label for="email"><span><i class="fas fa-envelope"></i></span></label>
-                    <input type="email" name="email" id="email" placeholder="john.doe@gmail.com" #inputEmail>
-                </p>
-                <!-- <p class="error">
-                    Email is required!
-                </p>
-                <p class="error">
-                    Email is not valid!
-                </p> -->
+            <p class="error">Email is required!</p>
+            <p class="error">Email is not valid!</p>
 
-                <!-- telephone -->
-                <p class="field field-icon">
-                    <label for="tel"><span><i class="fas fa-phone"></i></span></label>
-                    <select name="select-tel" id="select-tel" class="tel">
-                        <option value="00359">+359</option>
-                    </select>
-                    <input type="text" name="tel" id="tel" placeholder="885 888 888" #inputPhone>
-                </p>
-
+            <!-- telephone -->
+            <p class="field field-icon">
+                <label for="tel"><span><i class="fas fa-phone"></i></span></label>
+                <select name="select-tel" id="select-tel" class="tel">
+                    <option value="00359">+359</option>
+                </select>
+                <input 
+                type="text" 
+                name="tel" 
+                id="tel" 
+                placeholder="885 888 888" 
+                formControlName="tel" 
+                />
+            </p>
+            <ng-container formGroupName="passGroup">
                 <!-- password -->
                 <p class="field field-icon">
                     <label for="password"><span><i class="fas fa-lock"></i></span></label>
-                    <input type="password" name="password" id="password" placeholder="******" #inputPassword>
+                    <input 
+                    name="password" 
+                    id="password" 
+                    placeholder="******" 
+                    formControlName="password"
+                    />
                 </p>
-                <!-- <p class="error">
-                    Password is required!
-                </p>
-                <p class="error">
-                    Password must be at least 4 characters!
-                </p> -->
+                <p class="error">Password is required!</p>
+                <p class="error">Password must be at least 4 characters!</p>
 
                 <!-- rePassword -->
                 <p class="field field-icon">
                     <label for="rePassword"><span><i class="fas fa-lock"></i></span></label>
-                    <input type="password" name="rePassword" id="rePassword" placeholder="******" #inputRepass>
+                    <input 
+                    name="rePassword" 
+                    id="rePassword" 
+                    placeholder="******" 
+                    formControlName="rePassword"
+                    />
                 </p>
-                <!-- <p class="error">Repeat Password does not match password!</p> -->
-
-                <button (click)="register(inputEmail.value, inputUsername.value, inputPhone.value, inputPassword.value, inputRepass.value)">Create Account</button>
-
-                <p class="text-center">
-                    Have an account?
-                    <a routerLink="/login">Log In</a>
-                </p>
-
-            </fieldset>
-        </form>
-    </div>
+                <p class="error">Repeat Password does not match password!</p>
+            </ng-container>
 
 
+            <button>Create Account</button>
 
+            <p class="text-center">
+                Have an account?
+                <a routerLink="/login">Log In</a>
+            </p>
+
+        </fieldset>
+    </form>
+</div>

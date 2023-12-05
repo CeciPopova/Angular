@@ -15,7 +15,10 @@ export class LoginComponent {
 
   login(form: NgForm): void {
     console.log(form.value);
-    //TODO For now we are not handling the data
+
+    if (form.invalid) {
+      return;
+    }
     
     this.userService.login();
     this.router.navigate(['/']);
