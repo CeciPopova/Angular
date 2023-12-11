@@ -11,3 +11,9 @@
   <h3>Promise: {{ p | async }}</h3>
   <h3>Clock: {{ time$ | async | date : 'hh:mm:ss' }}</h3>
 </div>
+
+<nav>
+  <div><a routerLink="/">Home</a></div>
+  <div><a routerLink="/lazy">Lazy</a></div>
+</nav>
+<router-outlet/>
