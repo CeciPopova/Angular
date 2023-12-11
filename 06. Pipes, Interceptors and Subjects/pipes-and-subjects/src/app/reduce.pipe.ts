@@ -3,7 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'reduce',
   // pure: false => not pure fn will re-render
-  // pure: true => pure fn wll be memorized // DEFAULT
+  // pure: true => pure fn wll be memoized // DEFAULT
 })
 export class ReducePipe<T> implements PipeTransform {
   transform(
