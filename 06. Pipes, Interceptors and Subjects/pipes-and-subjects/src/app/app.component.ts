@@ -34,12 +34,18 @@ export class AppComponent implements OnInit {
 
   constructor(private userService: UserService) {}
 
+  users$ = this.userService.userObs$;
+
   ngOnInit(): void {
-   this.userService.loadUsers().subscribe({
-    next: console.log,
+  //  this.userService.loadUsers().subscribe({
+    // next: console.log,
     // error: (err) => {
       // console.log(`Error from appComponent: ${err}`)
     // },
-   });
+   //});
+  }
+
+  reloadUsers(): void {
+    this.userService.loadUsers();
   }
 }
