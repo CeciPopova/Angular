@@ -17,7 +17,8 @@
   <div><a routerLink="/lazy">Lazy</a></div>
 </nav>
 <router-outlet/>
-<div>
+<div *ngIf="(isLoadingUsers$ | async)">Loading...</div>
+<div *ngIf="(isLoadingUsers$ | async)">
   {{users$ | async | json}}
 </div>
 

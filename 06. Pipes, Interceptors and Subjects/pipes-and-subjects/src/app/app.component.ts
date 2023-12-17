@@ -35,6 +35,7 @@ export class AppComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   users$ = this.userService.userObs$;
+  isLoadingUsers$ = this.userService.isLoadingUsers$
 
   ngOnInit(): void {
   //  this.userService.loadUsers().subscribe({
