@@ -26,8 +26,6 @@ export class AppEmailDirective implements Validator, OnChanges {
 
     if (currentEmailChanges) {
       this.validator = appEmailValidator(currentEmailChanges.currentValue);
-    }
-    
+    }   
   }
-
 }

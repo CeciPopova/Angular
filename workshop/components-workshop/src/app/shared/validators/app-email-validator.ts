@@ -7,7 +7,6 @@ export function appEmailValidator(domains: string[]): ValidatorFn {
 
 
     return (control) => {
-
         return control.value === '' || regEx.test(control.value) ? null : { appEmailValidator: true};
     };
 }
