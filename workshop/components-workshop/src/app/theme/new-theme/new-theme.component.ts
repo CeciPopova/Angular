@@ -7,8 +7,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./new-theme.component.css']
 })
 export class NewThemeComponent {
-
-
   newThemeSubmitHandler(form: NgForm): void {
     if (form.invalid) {
       return;
