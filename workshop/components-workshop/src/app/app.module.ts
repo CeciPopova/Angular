@@ -10,11 +10,12 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
-import { UserModule } from './user/user.module';
+//import { UserModule } from './user/user.module';
 import { ThemeModule } from './theme/theme.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { appInterceptorProvider } from './app.interceptor';
-//import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -26,7 +27,8 @@ import { appInterceptorProvider } from './app.interceptor';
     PostsListComponent,
     HomeComponent,
     WelcomeComponent,
-   // NotFoundComponent
+    AuthenticateComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,7 @@ import { appInterceptorProvider } from './app.interceptor';
     SharedModule,
     ThemeModule,
     AppRoutingModule,
-    UserModule
+    //UserModule
   ],
   providers: [appInterceptorProvider],
   bootstrap: [AppComponent]

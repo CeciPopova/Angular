@@ -4,7 +4,7 @@ import { MainComponent } from '../main/main.component';
 import { NewThemeComponent } from './new-theme/new-theme.component';
 import { CurrentThemeComponent } from './current-theme/current-theme.component';
 import { AuthActivate } from '../core/guards/auth.activate';
-//import { NotFoundComponent } from '../not-found/not-found.component';
+import { NotFoundComponent } from '../not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -28,9 +28,6 @@ const routes: Routes = [
     component: NewThemeComponent,
     canActivate: [AuthActivate]
   },
-  // {
-    // path: '**', component: NotFoundComponent
-  // }
 
 ];
 
