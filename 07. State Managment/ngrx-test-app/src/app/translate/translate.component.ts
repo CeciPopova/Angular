@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
 import { TranslateState } from './translate.type';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/internal/Observable';
+
 
 @Component({
   selector: 'app-translate',
@@ -19,12 +20,12 @@ export class TranslateComponent {
 
   bulgarianMsg() {
 
-    this.store.dispatch({type: 'BULGARIAN'})
+    this.store.dispatch({type: 'BULGARIAN'});
   }
 
   greekMsg() {
 
-    this.store.dispatch({type: 'GREEK'})
+    this.store.dispatch({type: 'GREEK'});
 
   }
 }

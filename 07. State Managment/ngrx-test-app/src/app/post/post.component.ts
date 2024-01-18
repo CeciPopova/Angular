@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { Post, PostState } from './post.type';
-import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import * as PostAction from './post.actions';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-post',

@@ -1,6 +1,7 @@
 import { Action } from "@ngrx/store";
 
 
+
 //  types
 export const EDIT_TEXT = '[Post] Edit';
 export const RESET = '[Post] Reset';

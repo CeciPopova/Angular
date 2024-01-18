@@ -10,7 +10,6 @@ import { translateReducer } from './translate/translate.reducer';
 import { PostComponent } from './post/post.component';
 import { postReducer } from './post/post.reducer';
 import { FormsModule } from '@angular/forms';
-//import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({message: translateReducer, post: postReducer as any}),
-    //StoreDevtoolsModule.instrument({maxAge: 25, logOnly: !isDevMode()})
     FormsModule,
     StoreModule.forRoot({}, {}),
   ],

@@ -1,4 +1,4 @@
-import { Post, PostState } from './post.type';
+import { Post } from './post.type';
 import * as PostAction from './post.actions';
 
 export type Action = PostAction.All;
